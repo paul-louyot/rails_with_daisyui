@@ -58,3 +58,7 @@ group :development do
   gem "web-console"
 end
 
+
+gem "haml-rails", "~> 2.1"
+
+gem "html2haml", "~> 2.3"
