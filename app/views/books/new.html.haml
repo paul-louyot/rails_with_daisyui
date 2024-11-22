@@ -2,5 +2,5 @@
 %p Find me in app/views/books/new.html.erb
 
 = form_with url: books_path, method: :post do |form|
-  = form.text_area :message, class: "textarea textarea-bordered", size: "70x5", value: (1..10).map { |i| "Test#{i},Author#{i},\n" }.join("")
+  = form.text_area :message, class: "textarea textarea-bordered", size: "70x5", value: (1..20).map { |i| "Test#{i},Author#{i},\n" }.join("")
   = form.submit "Save", class: "btn btn-lg"
