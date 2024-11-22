@@ -1,0 +1,5 @@
+%h2 Qui es-tu ?
+
+= form_with url: sign_in_path, local: true, method: :post, class: 'flex flex-col sm:flex-row justify-between gap-4' do |form|
+  = form.text_field :user_name, autocomplete: 'off', required: true, pattern: ".*[a-zA-Z].*", autofocus: true, class: 'input input-bordered w-full'
+  = form.submit "Enregistrer", class: :btn

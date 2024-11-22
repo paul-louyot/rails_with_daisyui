@@ -1,0 +1,12 @@
+%h1 Salut !
+
+%details
+  %summary.cursor-pointer.outline-none.select-none J'ai pas mal de bouquins chez moi.
+  -# = image_tag "books.jpg", style: "max-width: 100%"
+
+%p Je vais m'en séparer !
+
+%p Si tu les veux, fais-toi plaisir.
+
+.flex.justify-center
+  = link_to "Réserver un livre", books_path, class: 'btn btn-lg no-underline'

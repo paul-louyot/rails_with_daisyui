@@ -1,0 +1,6 @@
+%h1 Books#new
+%p Find me in app/views/books/new.html.erb
+
+= form_with url: books_path, method: :post do |form|
+  = form.text_area :message, size: "70x5"
+  = form.submit
