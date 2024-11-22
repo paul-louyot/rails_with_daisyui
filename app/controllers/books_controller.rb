@@ -1,5 +1,7 @@
 class BooksController < ApplicationController
-  http_basic_authenticate_with name: "paul", password: "secret", only: [ :create, :new ]
+  http_basic_authenticate_with name: Rails.application.credentials.admin_name,
+                               password: Rails.application.credentials.admin_password,
+                               only: [ :create, :new ]
   before_action :set_user
   before_action :check_authentication, only: [ :claim, :unclaim ]
   before_action :set_book!, only: [ :claim, :unclaim ]
