@@ -12,6 +12,6 @@
             %span.font-normal ,
           %span
             = book.author
-      %div
-        = render partial: "form", locals: { book: book, can_unclaim: book.is_claimed_by?(@user_name) }
+
+      = render partial: "form", locals: { book: book, can_unclaim: book.is_claimed_by?(@user_name) }
 
