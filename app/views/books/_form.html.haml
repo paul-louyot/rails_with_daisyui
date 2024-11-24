@@ -3,8 +3,7 @@
     - if can_unclaim
       = link_to "Annuler", unclaim_book_path(book.id), data: { turbo_method: "post" }, class: 'btn btn-outline btn-neutral btn-sm md:btn-md w-24'
     - else
-      = button_tag "Réservé", type: 'button', disabled: true, class: 'btn btn-sm md:btn-md cursor-not-allowed w-24 select-none'
+      = render partial: "books/claimed", locals: { book: book }
 
   - else
-    -# = link_to "Réserver", claim_book_path(book.id), data: { turbo_method: "post" }, id: "claim_#{dom_id(book)}"
-    = button_to "Réserver", claim_book_path(book.id), method: :post, class: 'btn btn-accent btn-sm md:btn-md w-24'
+    = render partial: "books/claim", locals: { book: book }
