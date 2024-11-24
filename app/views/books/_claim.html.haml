@@ -1,1 +1,1 @@
-= link_to "Claim book", claim_book_path(book.id), data: { turbo_method: "post" }, id: "claim_#{dom_id(book)}"
+= button_to "Réserver", claim_book_path(book.id), method: :post, class: 'btn btn-accent btn-sm md:btn-md w-24', id: "claim_#{dom_id(book)}"

@@ -8,13 +8,13 @@ class BooksController < ApplicationController
   after_action only: :claim do
     Turbo::StreamsChannel.broadcast_replace_later_to("books",
       target: "claim_#{helpers.dom_id(@book)}",
-      partial: "books/just_claimed",
+      partial: "books/claimed",
       locals: { book: @book }
     )
   end
   after_action only: :unclaim do
     Turbo::StreamsChannel.broadcast_replace_later_to("books",
-      target: "just_claimed_#{helpers.dom_id(@book)}",
+      target: "claimed_#{helpers.dom_id(@book)}",
       partial: "books/claim",
       locals: { book: @book }
     )
