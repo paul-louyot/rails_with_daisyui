@@ -35,8 +35,9 @@ class BooksController < ApplicationController
   def create
     params[:message].split("\n").each do |line|
       title, author = line.split(",")
-      Book.create(title: title, author: author)
+      Book.find_or_create_by!(title: title, author: author)
     end
+    redirect_to books_path
   end
 
   def claim
