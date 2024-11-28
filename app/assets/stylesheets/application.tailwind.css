@@ -12,4 +12,11 @@
       display: initial; /* or whatever display value you need */
     }
   }
+
+  .hidden-until-mousemove {
+    display: none;
+  }
+  body.mouse-moved .hidden-until-mousemove {
+    display: initial;
+  }
 }

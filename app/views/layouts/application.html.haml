@@ -24,3 +24,9 @@
         .h-full.prose.container
           = yield
           .h-16
+    :javascript
+      function handleMouseMove() {
+        document.body.classList.add('mouse-moved');
+        document.removeEventListener('mousemove', handleMouseMove);
+      }
+      document.addEventListener('mousemove', handleMouseMove);

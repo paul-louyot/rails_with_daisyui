@@ -11,7 +11,7 @@
     %mask#circleMask
       %rect{:fill => "url(#circleGradient)", :height => "100%", :width => "100%"}
   %rect{:x => "0", :y => "0", :width => "100%", :height => "100%", :fill => "url(#books-100)"}
-  %rect.mouse-only{:x => "0", :y => "0", :width => "100%", :height => "100%", :fill => "url(#books-200)", :mask => "url(#circleMask)"}
+  %rect.mouse-only.hidden-until-mousemove{:x => "0", :y => "0", :width => "100%", :height => "100%", :fill => "url(#books-200)", :mask => "url(#circleMask)"}
 
 :javascript
   document.addEventListener('mousemove', (event) => {
