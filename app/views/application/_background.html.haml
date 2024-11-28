@@ -21,6 +21,9 @@
       const cx = (clientX / window.innerWidth) * 100;
       const cy = (clientY / window.innerHeight) * 100;
 
-      gradient.setAttribute('cx', `${cx}%`);
-      gradient.setAttribute('cy', `${cy}%`);
+      setTimeout(() => {
+        gradient.setAttribute('cx', `${cx}%`);
+        gradient.setAttribute('cy', `${cy}%`);
+      }, 100);
+
   });
