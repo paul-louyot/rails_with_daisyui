@@ -1,1 +1,2 @@
-= button_to "Réserver", claim_book_path(book.id), method: :post, class: 'btn btn-accent btn-sm md:btn-md w-24', id: "claim_#{dom_id(book)}"
+%div{id: "claim_#{dom_id(book)}"}
+  = button_to "Réserver", claim_book_path(book.id), method: :post, class: 'btn btn-accent btn-sm md:btn-md w-24'
