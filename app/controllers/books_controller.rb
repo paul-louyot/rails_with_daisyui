@@ -54,6 +54,8 @@ class BooksController < ApplicationController
 
     @book.update!(user_name: nil)
     render partial: "form", locals: { book: @book, can_unclaim: @book.is_claimed_by?(@user_name) }
+  rescue
+    render partial: "error", locals: { book: @book }
   end
 
   def new
